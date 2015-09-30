@@ -1,0 +1,37 @@
+<!Doctype html>
+
+<html>
+<head>
+	<title>Javascript! and jQuery</title>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+</head>
+<body>
+	<img id="image1" src="images/image1.jpg" alt="image1">
+	<img id="image2" src="images/image2.jpg" alt="image2">
+	<img id="image3" src="images/image3.jpg" alt="image3"><br />
+	<img id="image4" src="images/image4.jpg" alt="image4">
+	<img id="image5" src="images/image5.jpg" alt="image5">
+	<img id="image6" src="images/image6.jpg" alt="image6"><br />
+	<img id="image7" src="images/image7.jpg" alt="image7">
+	<img id="image8" src="images/image8.jpg" alt="image8">
+	<img id="image9" src="images/image9.jpg" alt="image9"><br />
+	<img id="image10" src="images/image10.jpg" alt="image10">
+	<script>
+		$("body").click(
+			function(){
+				$("img").fadeOut(1000);
+				$("#image3").fadeIn(1000);
+				$("#image3").animate({
+					width: "100%",
+				},4000);
+				$("#image3").fadeOut(1000);
+				$("#image3").animate({
+					width: "20%",
+				},4000);
+				$("image4").delay(5000).fadeIn(5000);
+			}
+		);
+	</script>
+</body>
+</html>
