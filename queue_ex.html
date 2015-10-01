@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('#wow').click(function(){
+            $(this).delay(200).queue(makeRed);
+            });
+          });
+
+      function makeRed(){
+        $('#wow').css('color', 'red');
+        $('#wow').delay(200).queue(makeBlack);
+        $('#wow').dequeue();
+      }
+
+      function makeBlack(){
+        $('#wow').css('color', 'black');
+        $('#wow').delay(200).queue(makeRed);
+        $('#wow').dequeue();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wow"><p>wow</p></div>
+  </body>
+</html>
